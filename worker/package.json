@@ -1,0 +1,26 @@
+{
+  "name": "@scottie/worker",
+  "version": "1.0.0",
+  "private": true,
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "ts-node-dev --respawn --transpile-only ../api/src/workers/index.ts",
+    "build": "echo 'Worker builds as part of packages/api (tsc)'",
+    "start": "node ../api/dist/workers/index.js",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "ioredis": "^5.3.0",
+    "dotenv": "^16.4.0",
+    "pg": "^8.11.0",
+    "@types/pg": "^8.11.0",
+    "cron-parser": "^4.9.0",
+    "@scottie/shared": "*"
+  },
+  "devDependencies": {
+    "ts-node-dev": "^2.0.0",
+    "vitest": "^1.6.0",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.4.0"
+  }
+}
